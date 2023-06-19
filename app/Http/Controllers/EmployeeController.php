@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EmployeeRequest;
 use App\Models\Employee;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        //
+        return $this->successResponse(Employee::all(), "Employees List");
     }
 
     /**
@@ -26,9 +27,16 @@ class EmployeeController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(EmployeeRequest $request)
     {
-        //
+        $validated = $request->validated();
+
+        $validated['password'] = bcrypt($validated['password']);
+        
+        return $this->successResponse(
+            Employee::create($validated),
+            "New Employee Created"
+        );
     }
 
     /**
@@ -36,7 +44,7 @@ class EmployeeController extends Controller
      */
     public function show(Employee $employee)
     {
-        //
+        return $this->successResponse($employee, "Specific Employee Data");
     }
 
     /**
@@ -50,9 +58,15 @@ class EmployeeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Employee $employee)
+    public function update(EmployeeRequest $request, Employee $employee)
     {
-        //
+        $validated = $request->validated();
+
+        $validated['password'] = bcrypt($validated['password']);
+
+        if($employee->update($validated)) {
+            return $this->successResponse($employee, "Employee data updated successfully");
+        }
     }
 
     /**
@@ -60,6 +74,8 @@ class EmployeeController extends Controller
      */
     public function destroy(Employee $employee)
     {
-        //
+        if($employee->delete()) {
+            return $this->successResponse($employee, "Employee deleted successfullly");
+        }
     }
 }
