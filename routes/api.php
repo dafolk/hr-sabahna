@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmployeeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+Route::post('/admin/register', [AdminController::class, "register"]);
+Route::post('/admin/login', [AdminController::class, "login"]);
 
 Route::apiResources([
     'employees' => EmployeeController::class,
