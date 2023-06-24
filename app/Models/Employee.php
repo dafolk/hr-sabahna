@@ -18,4 +18,8 @@ class Employee extends Model
         'position',
         'salary'
     ];
+
+    public function employee_data() {
+        return $this->hasMany(EmployeeData::class);
+    }
 }
