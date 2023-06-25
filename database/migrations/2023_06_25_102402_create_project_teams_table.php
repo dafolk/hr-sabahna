@@ -9,15 +9,13 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
     public function up(): void
     {
-        Schema::create('admins', function (Blueprint $table) {
+        Schema::create('project_teams', function (Blueprint $table) {
             $table->id();
-            $table->string('fullname');
-            $table->string('email');
-            $table->string('password');
-            $table->string('photo')->nullable();
-            $table->string("token")->nullable();
+            $table->integer('team_id');
+            $table->integer('project_id');
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('admins');
+        Schema::dropIfExists('project_teams');
     }
 };

@@ -74,7 +74,6 @@ class AdminController extends Controller
         $validated['password'] =  bcrypt($validated['password']);
         $token = uniqid(base64_encode(Str::random(32)));
         $validated['token'] = $token;
-
         $cAdmin = Admin::create($validated);
 
         return response()->json([
@@ -104,5 +103,17 @@ class AdminController extends Controller
                 "message" => "Email or Password is Incorrect"
             ]);
         }
+    }
+
+    public function logout(Request $request)
+    {
+        $admin = Admin::where("token", $request->bearerToken())->first();
+        $admin->token = null;
+        $admin->save();
+        return response()->json([
+            "error" => false,
+            "authorize" => true,
+            "message" => "Logout Successfully"
+        ]);
     }
 }
