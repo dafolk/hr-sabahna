@@ -61,9 +61,16 @@ class ProjectTeamController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ProjectTeam $projectTeam)
+    public function update(ProjectTeamRequest $request, ProjectTeam $projectTeam)
     {
-        //
+        $validated = $request->validated();
+
+        if($projectTeam->update($validated)){
+            return $this->successResponse(
+                $projectTeam,
+                "Project team updated"
+            );
+        }
     }
 
     /**
@@ -71,6 +78,11 @@ class ProjectTeamController extends Controller
      */
     public function destroy(ProjectTeam $projectTeam)
     {
-        //
+        if($projectTeam->delete()){
+            return $this->successResponse(
+                $projectTeam,
+                "Projected team deleted"
+            );
+        }
     }
 }
