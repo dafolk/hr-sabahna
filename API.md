@@ -7,7 +7,7 @@
 
 ## Table of contents
 
-> ## API lists
+> ### API lists
 >
 >> + [Admin]
 >>
@@ -30,7 +30,7 @@
 >>     3. [UPDATE]
 >>     4. [DELETE]
 >>
->>> | Team | Project Team | Team Employee |
+>>> | [Team] | [Project Team] | [Team Employee](#team-employee-api) |
 >>> | ---- | ------------ | ------------- |
 >>> | [GET] | [GET] | [GET]
 >>> | [POST] | [POST] | [POST]
@@ -200,6 +200,7 @@
     "status": 1 //(0 for non working, 1 for working) //optional //default 1
 }
 ```
+
 **Excepted Output:**
 
 ```json
@@ -255,6 +256,94 @@
         "datetime": "Timestamp",
         "status": 1
     }
+}
+```
+
+[Return to API Lists Menu](#api-lists)
+
+---
+
+## **Team Employee API**
+
+### `GET` */teamEmployees*
+
+**Excepted Output:**
+
+```json
+{
+    "error": false,
+    "message": "Team Employee List",
+    "data": [
+        {
+            "id": 1,
+            "team_id": 1,
+            "employee_id": 1
+        }
+    ]
+}
+```
+
+### `POST` */teamEmployees*
+
+```json
+{
+    "team_id": 1,
+    "employee_id": 1
+}
+```
+
+**Excepted Output:**
+
+```json
+{
+    "error": false,
+    "message": "New Team Employee created",
+    "data": {
+        "team_id": 1,
+        "employee_id": 1,
+        "id": 1
+    }
+}
+```
+
+### `UPDATE` */teamEmployees/id*
+
+```json
+{
+    "team_id": 1,
+    "employee_id": 1
+}
+```
+
+**Excepted Output:**
+
+```json
+{
+    "error": false,
+    "message": "Team Employee updated",
+    "data": {
+        "id": 1,
+        "team_id": 1,
+        "employee_id": 1
+    }
+}
+```
+
+### `DELETE` */teamEmployees/id*
+
+**Excepted Output:**
+
+```json
+{
+    {
+    "error": false,
+    "message": "Team Employee deleted",
+    "data": {
+        "id": 1,
+        "team_id": 1,
+        "employee_id": 1
+    }
+}
 }
 ```
 
