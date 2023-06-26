@@ -32,10 +32,10 @@
 >>
 >>> | [Team] | [Project Team] | [Team Employee](#team-employee-api) |
 >>> | ---- | ------------ | ------------- |
->>> | [GET] | [GET] | [GET](#get-teamemployees) |
->>> | [POST] | [POST] | [POST](#post-teamemployees) |
->>> | [UPDATE] | [UPDATE] | [UPDATE](#update-teamemployeesid) |
->>> | [DELETE] | [DELETE] | [DELETE](#delete-teamemployeesid) |
+>>> | [GET] | [GET](#get-project_team) | [GET](#get-teamemployees) |
+>>> | [POST] | [POST](#post-project_team) | [POST](#post-teamemployees) |
+>>> | [UPDATE] | [UPDATE](#update-project_teamid) | [UPDATE](#update-teamemployeesid) |
+>>> | [DELETE] | [DELETE](#delete-project_teamid) | [DELETE](#delete-teamemployeesid) |
 
 ---
 
@@ -263,6 +263,98 @@
 
 ---
 
+## **Project Team API**
+
+### `GET` */project_team*
+
+**Excepted Output:**
+
+```json
+{
+    "error": false,
+    "message": "Project Teams List",
+    "data": [
+        {
+            "id": 1,
+            "team_id": 1,
+            "project_id": 1,
+            "created_at": "Timestamp",
+            "updated_at": "Timestamp"
+        }
+    ]
+}
+```
+
+### `POST` */project_team*
+
+```json
+{
+    "project_id": 1,
+    "team_id": 1
+}
+```
+
+**Excepted Output:**
+
+```json
+{
+    "error": false,
+    "message": "New Team Employee created",
+    "data": {
+        "team_id": 1,
+        "employee_id": 1,
+        "id": 1
+    }
+}
+```
+
+### `UPDATE` */project_team/id*
+
+```json
+{
+    "project_id": 1,
+    "team_id": 1
+}
+```
+
+**Excepted Output:**
+
+```json
+{
+    "error": false,
+    "message": "Project team updated",
+    "data": {
+        "id": 1,
+        "team_id": 1,
+        "project_id": 1,
+        "created_at": "Timestamp",
+        "updated_at": "Timestamp"
+    }
+}
+```
+
+### `DELETE` */project_team/id*
+
+**Excepted Output:**
+
+```json
+{
+    "error": false,
+    "message": "Projected team deleted",
+    "data": {
+        "id": 1,
+        "team_id": 1,
+        "project_id": 1,
+        "created_at": "Timestamp",
+        "updated_at": "Timestamp"
+    }
+}
+```
+
+[Return to API Lists Menu](#api-lists)
+
+---
+
 ## **Team Employee API**
 
 ### `GET` */teamEmployees*
@@ -335,7 +427,6 @@
 
 ```json
 {
-    {
     "error": false,
     "message": "Team Employee deleted",
     "data": {
@@ -343,7 +434,6 @@
         "team_id": 1,
         "employee_id": 1
     }
-}
 }
 ```
 
