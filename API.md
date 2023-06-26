@@ -32,10 +32,10 @@
 >>
 >>> | [Team] | [Project Team] | [Team Employee](#team-employee-api) |
 >>> | ---- | ------------ | ------------- |
->>> | [GET] | [GET] | [GET]
->>> | [POST] | [POST] | [POST]
->>> | [UPDATE] | [UPDATE] | [UPDATE]
->>> | [DELETE] | [DELETE] | [DELETE]
+>>> | [GET] | [GET] | [GET](#get-teamemployees) |
+>>> | [POST] | [POST] | [POST](#post-teamemployees) |
+>>> | [UPDATE] | [UPDATE] | [UPDATE](#update-teamemployeesid) |
+>>> | [DELETE] | [DELETE] | [DELETE](#delete-teamemployeesid) |
 
 ---
 
