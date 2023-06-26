@@ -43,7 +43,7 @@
 
 ## Employee API
 
-### `GET` ==*/employees*==
+### `GET` <mark>*/employees*</mark>
 
 ### `POST` */employees*
 
