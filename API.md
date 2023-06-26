@@ -14,7 +14,7 @@
 >> + [Admin]
 >>
 >>
->> + [Employee](#employee)
+>> + [Employee](#employee-api)
 >>    1. [GET](#get-employees)
 >>    2. [POST](#post-employees)
 >>    3. [UPDATE](#update-employeesid)
@@ -41,9 +41,9 @@
 
 ---
 
-## Employee
+## Employee API
 
-### `GET` */employees*
+### `GET` ==*/employees*==
 
 ### `POST` */employees*
 
