@@ -13,7 +13,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        return $this->successResponse(Employee::all(), "Employees List");
+        return $this->successResponse(Employee::with('employee_data')->get(), "Employees List");
     }
 
     /**

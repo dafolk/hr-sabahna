@@ -2,9 +2,13 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmployeeController;
+
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ProjectTeamController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\EmployeeDataController;
+use App\Http\Controllers\TeamEmployeeController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,4 +34,7 @@ Route::group(["middleware" => "token_valid"], function () {
 
 Route::apiResources([
     'employees' => EmployeeController::class,
+    'employeeDatas' => EmployeeDataController::class,
+    'teamEmployees' => TeamEmployeeController::class,
+
 ]);
