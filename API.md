@@ -1,7 +1,7 @@
 
 # Sabahna HR
 
-## `host/api/...` for api route
+**`host/api/...` for api route**
 
 ---
 
@@ -9,8 +9,6 @@
 
 > ## API lists
 >
-> ---
->>
 >> + [Admin]
 >>
 >>
