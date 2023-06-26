@@ -20,11 +20,11 @@
 >>    3. [UPDATE](#update-employeesid)
 >>    4. [DELETE](#delete-employeesid)
 >>
->>> + [Additional Employee Data]
->>>     1. [GET]
->>>     2. [POST]
->>>     3. [UPDATE]
->>>     4. [DELETE]
+>>> + [Additional Employee Data](#additional-employee-data-api)
+>>>     1. [GET](#get-employeedatas)
+>>>     2. [POST](#post-employeedatas)
+>>>     3. [UPDATE](#update-employeedatasid)
+>>>     4. [DELETE](#delete-employeedatasid)
 >>>
 >> + [Project]
 >>     1. [GET]
@@ -53,7 +53,7 @@
     "message": "Employees List",
     "data": [
         {
-            "id": id,
+            "id": 1,
             "fullname": "example",
             "email": "example@gmail.com",
             "phone": "000000",
@@ -66,7 +66,7 @@
             "employee_data": [
                 {
                     "id": 1,
-                    "employee_id": id,
+                    "employee_id": 1,
                     "attendance": 1,
                     "datetime": "Timestamp",
                     "status": 1
@@ -167,6 +167,8 @@
 }
 ```
 
+[Return to API Lists Menu](#api-lists)
+
 ---
 
 ## **Additional Employee Data API**
@@ -257,5 +259,7 @@
     }
 }
 ```
+
+[Return to API Lists Menu](#api-lists)
 
 ---
