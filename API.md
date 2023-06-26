@@ -30,7 +30,7 @@
 >>     3. [UPDATE]
 >>     4. [DELETE]
 >>
->>> | [Team] | [Project Team] | [Team Employee](#team-employee-api) |
+>>> | [Team] | [Project Team](#project-team-api) | [Team Employee](#team-employee-api) |
 >>> | ---- | ------------ | ------------- |
 >>> | [GET] | [GET](#get-project_team) | [GET](#get-teamemployees) |
 >>> | [POST] | [POST](#post-project_team) | [POST](#post-teamemployees) |
