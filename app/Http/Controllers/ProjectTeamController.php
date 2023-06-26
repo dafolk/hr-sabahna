@@ -13,7 +13,10 @@ class ProjectTeamController extends Controller
      */
     public function index()
     {
-        //
+        return $this->successResponse(
+            ProjectTeam::all(),
+            "Project Teams List"
+        );
     }
 
     /**
