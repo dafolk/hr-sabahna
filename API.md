@@ -10,6 +10,10 @@
 > ### API lists
 >
 >> + [Admin]
+>>    1.[GET]
+>>    2.[POST]
+>>    3.[UPDATE]
+>>    4.[DELETE]
 >>
 >>
 >> + [Employee](#employee-api)
