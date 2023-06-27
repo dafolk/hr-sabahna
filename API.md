@@ -1,4 +1,3 @@
-
 # Sabahna HR
 
 **`host/api/...` for api route**
@@ -9,43 +8,61 @@
 
 > ### API lists
 >
->> + [Admin]
->>    1.[GET]
->>    2.[POST]
->>    3.[UPDATE]
->>    4.[DELETE]
->>
->>
->> + [Employee](#employee-api)
->>    1. [GET](#get-employees)
->>    2. [POST](#post-employees)
->>    3. [UPDATE](#update-employeesid)
->>    4. [DELETE](#delete-employeesid)
->>
->>> + [Additional Employee Data](#additional-employee-data-api)
->>>     1. [GET](#get-employeedatas)
->>>     2. [POST](#post-employeedatas)
->>>     3. [UPDATE](#update-employeedatasid)
->>>     4. [DELETE](#delete-employeedatasid)
->>>
->> + [Project]
->>     1. [GET]
->>     2. [POST]
->>     3. [UPDATE]
->>     4. [DELETE]
->>
->>> | [Team] | [Project Team](#project-team-api) | [Team Employee](#team-employee-api) |
->>> | ---- | ------------ | ------------- |
->>> | [GET] | [GET](#get-project_team) | [GET](#get-teamemployees) |
->>> | [POST] | [POST](#post-project_team) | [POST](#post-teamemployees) |
->>> | [UPDATE] | [UPDATE](#update-project_teamid) | [UPDATE](#update-teamemployeesid) |
->>> | [DELETE] | [DELETE](#delete-project_teamid) | [DELETE](#delete-teamemployeesid) |
+> > -   [Admin](#admin-api) 1.[REGISTER](#admin-register) 2.[LOGIN](#admin-login) 3.[LOGOUT](#admin-logout)
+> > -   [Employee](#employee-api)
+> >     1. [GET](#get-employees)
+> >     2. [POST](#post-employees)
+> >     3. [UPDATE](#update-employeesid)
+> >     4. [DELETE](#delete-employeesid)
+> >
+> > > -   [Additional Employee Data](#additional-employee-data-api)
+> > >     1. [GET](#get-employeedatas)
+> > >     2. [POST](#post-employeedatas)
+> > >     3. [UPDATE](#update-employeedatasid)
+> > >     4. [DELETE](#delete-employeedatasid)
+> >
+> > -   [Project]
+> >     1. [GET](#get-project)
+> >     2. [POST](#post-project)
+> >     3. [UPDATE](#update-project)
+> >     4. [DELETE](#delete-project)
+> >
+> > > | [Team](#team-api)      | [Project Team](#project-team-api) | [Team Employee](#team-employee-api) |
+> > > | ---------------------- | --------------------------------- | ----------------------------------- |
+> > > | [GET](#get-team)       | [GET](#get-project_team)          | [GET](#get-teamemployees)           |
+> > > | [POST](#post-team)     | [POST](#post-project_team)        | [POST](#post-teamemployees)         |
+> > > | [UPDATE](#update-team) | [UPDATE](#update-project_teamid)  | [UPDATE](#update-teamemployeesid)   |
+> > > | [DELETE](#delete-team) | [DELETE](#delete-project_teamid)  | [DELETE](#delete-teamemployeesid)   |
 
 ---
 
+## **Admin Api**
+
+### `POST` \/admin/register
+
+```json
+{
+    "fullname": "KK",
+    "email": "kk1@gmail.com",
+    "password": "kkpassword123",
+    "photo": null
+}
+```
+
+### `POST` \/admin/login
+
+```json
+{
+    "email": "kk@gmail.com",
+    "password": "kkpassword123"
+}
+```
+
+### `POST` \/admin/logout
+
 ## **Employee API**
 
-### `GET` */employees*
+### `GET` _/employees_
 
 **Excepted Output:**
 
@@ -79,7 +96,7 @@
 }
 ```
 
-### `POST` */employees*
+### `POST` _/employees_
 
 ```json
 {
@@ -112,7 +129,7 @@
 }
 ```
 
-### `UPDATE` */employees/id*
+### `UPDATE` _/employees/id_
 
 ```json
 {
@@ -146,7 +163,7 @@
 }
 ```
 
-### `DELETE` */employees/id*
+### `DELETE` _/employees/id_
 
 **Ecxepted Output:**
 
@@ -175,7 +192,7 @@
 
 ## **Additional Employee Data API**
 
-### `GET` */employeeDatas*
+### `GET` _/employeeDatas_
 
 **Excepted Output:**
 
@@ -195,7 +212,7 @@
 }
 ```
 
-### `POST` */employeeDatas*
+### `POST` _/employeeDatas_
 
 ```json
 {
@@ -219,7 +236,7 @@
 }
 ```
 
-### `UPDATE` */employeeDatas/id*
+### `UPDATE` _/employeeDatas/id_
 
 ```json
 {
@@ -245,7 +262,7 @@
 }
 ```
 
-### `DELETE` */employeeDatas/id*
+### `DELETE` _/employeeDatas/id_
 
 **Excepted Output:**
 
@@ -269,7 +286,7 @@
 
 ## **Project Team API**
 
-### `GET` */project_team*
+### `GET` _/project_team_
 
 **Excepted Output:**
 
@@ -289,7 +306,7 @@
 }
 ```
 
-### `POST` */project_team*
+### `POST` _/project_team_
 
 ```json
 {
@@ -312,7 +329,7 @@
 }
 ```
 
-### `UPDATE` */project_team/id*
+### `UPDATE` _/project_team/id_
 
 ```json
 {
@@ -337,7 +354,7 @@
 }
 ```
 
-### `DELETE` */project_team/id*
+### `DELETE` _/project_team/id_
 
 **Excepted Output:**
 
@@ -361,7 +378,7 @@
 
 ## **Team Employee API**
 
-### `GET` */teamEmployees*
+### `GET` _/teamEmployees_
 
 **Excepted Output:**
 
@@ -379,7 +396,7 @@
 }
 ```
 
-### `POST` */teamEmployees*
+### `POST` _/teamEmployees_
 
 ```json
 {
@@ -402,7 +419,7 @@
 }
 ```
 
-### `UPDATE` */teamEmployees/id*
+### `UPDATE` _/teamEmployees/id_
 
 ```json
 {
@@ -425,7 +442,7 @@
 }
 ```
 
-### `DELETE` */teamEmployees/id*
+### `DELETE` _/teamEmployees/id_
 
 **Excepted Output:**
 
