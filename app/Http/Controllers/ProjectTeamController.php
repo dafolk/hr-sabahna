@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Project_TeamRequest;
-use App\Models\Project_Team;
+use App\Http\Requests\ProjectTeamRequest;
 use App\Models\ProjectTeam;
 use Illuminate\Http\Request;
 
@@ -28,7 +27,7 @@ class ProjectTeamController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Project_TeamRequest $request)
+    public function store(ProjectTeamRequest $request)
     {
         $validated = $request->validated();
         $project_team = ProjectTeam::create($validated);
@@ -43,7 +42,7 @@ class ProjectTeamController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Project_Team $project_Team)
+    public function show(ProjectTeam $projectTeam)
     {
         //
     }
@@ -51,7 +50,7 @@ class ProjectTeamController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Project_Team $project_Team)
+    public function edit(ProjectTeam $projectTeam)
     {
         //
     }
@@ -59,7 +58,7 @@ class ProjectTeamController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Project_Team $project_Team)
+    public function update(Request $request, ProjectTeam $projectTeam)
     {
         //
     }
@@ -67,7 +66,7 @@ class ProjectTeamController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Project_Team $project_Team)
+    public function destroy(ProjectTeam $projectTeam)
     {
         //
     }

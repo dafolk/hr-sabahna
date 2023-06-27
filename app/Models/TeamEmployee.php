@@ -13,4 +13,5 @@ class TeamEmployee extends Model
         'team_id',
         'employee_id'
     ];
+    public $timestamps = false;
 }
